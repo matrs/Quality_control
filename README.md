@@ -4,18 +4,19 @@
 
 This pipeline is for quality control of biological sequences, any type of sequence that 
 you'd usually run `fastqc` on. Also, includes detection of common sources of contaminants 
-through `fastq_screen` and a summary of all the results with `multiqc`.It's meant to be
-used before any processing. It is based on the [rna-seq snakemake workflows](https://github.com/snakemake-workflows/Quality_control),
-taking a couple of functions and general organization from them so if you are familiar 
+through `fastq_screen` and a summary of all the results with `multiqc`. It's meant to be
+used before any processing of the sequences. It is based on the 
+[rna-seq snakemake workflows](https://github.com/snakemake-workflows),
+taking a couple of functions and general organization from them, so if you are familiar 
 with those, you should be able to use and modify this without much effort.
 
 The code corresponding to the `fastqc` rule in qc.smk is commented out because in my cluster
 `fastqc` fails, generating faulty zip files (related to `/tmp`). I include a script to 
 remediate this, see `fastqc_parallel.sh` for more details. 
 
-The folder `wrapper` contains a modified version of the official fastq_screen to make it
-compatible with newer versions. Ideally, I'll be able to make a pull request to the
-official snakameke-wrappers repository.
+The folder `wrapper` contains a modified version of the official `fastq_screen` wrapper 
+to make it compatible with newer versions. Ideally, I'll be able to make a pull request 
+and add this to the official snakameke-wrappers repository.
 
 ## Authors
 
