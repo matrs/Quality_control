@@ -3,7 +3,7 @@
 [![Snakemake](https://img.shields.io/badge/snakemake-≥5.4.1-brightgreen.svg)](https://snakemake.bitbucket.io)
 
 This pipeline is for quality control of biological sequences, any type of sequence that 
-you'd usually run `fastqc` on. Also, includes detection of common sources of contaminants 
+you'd usually run `fastqc` on. Includes detection of common sources of contaminants 
 through `fastq_screen` and a summary of all the results with `multiqc`. It's meant to be
 used before any processing of the sequences. It is based on the 
 [rna-seq snakemake workflows](https://github.com/snakemake-workflows),
