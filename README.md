@@ -85,7 +85,3 @@ The following recipe provides established best practices for running and extendi
 9. Optional: Create a self-contained workflow archive for publication along with the paper (snakemake --archive).
 10. Optional: Delete the local clone/workdir to free space.
 
-
-## Testing
-
-Tests cases are in the subfolder `.test`. They are automtically executed via continuous integration with Travis CI.
