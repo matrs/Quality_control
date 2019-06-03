@@ -10,8 +10,8 @@ used before any processing of the sequences. It is based on the
 taking a couple of functions and general organization from them, so if you are familiar 
 with those, you should be able to use and modify this without much effort.
 
-The code corresponding to the `fastqc` rule in `qc.smk` is commented out because in my cluster
-`fastqc` fails, generating faulty zip files (related to `/tmp`). I include a script to 
+The code corresponding to the `fastqc` rule in `qc.smk` is commented out because in the
+job cluster `fastqc` fails, generating faulty zip files (related to `/tmp`). I include a script to 
 remediate this, see `fastqc_parallel.sh` for more details. 
 
 The folder `wrapper` contains a modified version of the official `fastq_screen` wrapper 
