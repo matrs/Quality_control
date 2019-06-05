@@ -12,6 +12,6 @@ mkdir -p qc/fastqc
 #Set the number of cores with -j, here two files at once are the input so -j10
 #will call fastqc with 20 files and cores in total. For single-end units.tsv, use
 #one column.
-parallel -j 10 --skip-first-line --colsep '\t' "fastqc -t 2 --quiet \
+parallel -j $1 --skip-first-line --colsep '\t' "fastqc -t 2 --quiet \
 -o qc/fastqc {3} {4}" :::: units.tsv 
 

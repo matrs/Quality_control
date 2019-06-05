@@ -5,8 +5,8 @@ samples: samples.tsv
 # sample).
 units: units.tsv
 fastq_screen:
-    conf: "fastq_screen.conf"
+  conf: "fastq_screen.conf"
 params:
-    multiqc: --fullnames --title "QC fastq screen and fastqc" 
-    --comment "Quality control, Fastqc plus Fastq Screen to check for contamination " 
-    "from common sources"
+  fastq_screen: '' 
+  multiqc: --fullnames --title "QC fastq screen and fastqc" 
+           --comment "Quality control, Fastqc plus Fastq Screen to check for contaminatio from common sources"

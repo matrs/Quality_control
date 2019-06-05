@@ -12,7 +12,7 @@ rule fastq_screen:
         subset=int(1e6),
         aligner='bowtie2',
         extra=""
-    threads: 4
+    threads: 5
     priority: 2
     wrapper:
         "file:wrappers/fastq_screen/"
