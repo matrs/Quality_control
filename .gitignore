@@ -24,4 +24,5 @@ scripts/.snakemake*
 !fastqc_parallel.sh
 !fastq_screen.conf
 !fastq_screen_conf.tsv
+!wrappers
 !wrappers/*
