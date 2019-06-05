@@ -4,7 +4,9 @@ samples: samples.tsv
 # Units are technical replicates (e.g. lanes, or resequencing of the same biological
 # sample).
 units: units.tsv
-
+fastq_screen:
+    conf: "fastq_screen.conf"
 params:
-#  multiqc: --fullnames --title "QC fastq screen and fastqc" 
-#          --comment "Quality control, Fastqc plus Fastq Screen to check for contamination from common sources"
+    multiqc: --fullnames --title "QC fastq screen and fastqc" 
+    --comment "Quality control, Fastqc plus Fastq Screen to check for contamination " 
+    "from common sources"

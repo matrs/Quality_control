@@ -8,7 +8,7 @@ rule fastq_screen:
     log:
         "logs/fastq_screen/{sample}-{unit}.log"
     params:
-        fastq_screen_config="fastq_screen.conf", #tsv also works
+        fastq_screen_config=config["fastq_screen"]["conf"], #tsv also works
         subset=int(1e6),
         aligner='bowtie2',
         extra=""
