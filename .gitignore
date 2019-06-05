@@ -27,3 +27,6 @@ scripts/.snakemake*
 !fastq_screen_conf.tsv
 !wrappers
 !wrappers/*
+!wrappers/fastq_screen/*
+wrappers/fastq_screen/wrapper.py~
+wrappers/fastq_screen/environment.yaml~
