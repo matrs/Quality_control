@@ -13,26 +13,26 @@ rule fastq_screen:
         aligner='bowtie2',
         extra=""
     threads: 5
-    priority: 2
+    #priority: 2
     wrapper:
         "file:wrappers/fastq_screen/"
     
-#rule fastqc:
-#    input:
-#        get_fastqs
-#    output:
-#        html="qc/fastqc/{sample}-{unit}.html",
-#        zip="qc/fastqc/{sample}-{unit}.zip"
-#    log:
-#        "logs/fastqc/{sample}-{unit}.log"
-#    priority: 1
-#    wrapper:
-#    #    "0.35.0/bio/fastqc"
+rule fastqc:
+   input:
+       get_fastqs
+   output:
+       html="qc/fastqc/{sample}-{unit}.html",
+       zip="qc/fastqc/{sample}-{unit}.zip"
+   log:
+       "logs/fastqc/{sample}-{unit}.log"
+   #priority: 1
+   thread: 2
+   wrapper:
+       "0.35.0/bio/fastqc"
 
 rule multiqc:
     input:
-        "qc/fastqc/",
-        expand("qc/fastq_screen/{unit.sample}-{unit.unit}_screen.txt", unit=units.itertuples())
+        expand(["qc/fastq_screen/{unit.sample}-{unit.unit}_screen.txt", "qc/fastqc/{unit.sample}-{unit.unit}.zip"], unit=units.itertuples())
     output:
         "qc/multiqc_report.html"
     log:

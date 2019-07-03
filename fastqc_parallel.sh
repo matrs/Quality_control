@@ -2,7 +2,7 @@
 
 #This script is used because in my cluster, fastqc fails with errors related to temp
 #files. Also, when it didn't fail, it created faulty zip files making multiqc complain 
-#or not recognize them. This failed with the official wrapper or using snakemake 
+#or not recognize them. This failed either using the official wrapper or using snakemake 
 #"shell" directive.
 
 set -euxo pipefail
