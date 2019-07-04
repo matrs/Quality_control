@@ -6,6 +6,7 @@ samples: samples.tsv
 units: units.tsv
 fastq_screen:
   conf: "fastq_screen.conf"
+  threads: 4
 params:
   fastq_screen: '' 
   multiqc: --fullnames --title "QC fastq screen and fastqc" 

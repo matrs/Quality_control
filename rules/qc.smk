@@ -12,23 +12,26 @@ rule fastq_screen:
         subset=int(1e6),
         aligner='bowtie2',
         extra=""
-    threads: 5
+    threads: config["fastq_screen"]["threads"]
     #priority: 2
     wrapper:
         "file:wrappers/fastq_screen/"
     
-rule fastqc:
-   input:
-       get_fastqs
-   output:
-       html="qc/fastqc/{sample}-{unit}.html",
-       zip="qc/fastqc/{sample}-{unit}.zip"
-   log:
-       "logs/fastqc/{sample}-{unit}.log"
-   #priority: 1
-   thread: 2
-   wrapper:
-       "0.35.0/bio/fastqc"
+# rule fastqc:
+#     input:
+#        get_fastqs
+#     output:
+#        html="qc/fastqc/{sample}-{unit}.html",
+#        zip="qc/fastqc/{sample}-{unit}.zip"
+#     log:
+#        "logs/fastqc/{sample}-{unit}.log"
+#     # priority: 1
+#     # threads: 2
+#     # params: '-Xms600m'
+#     # wrapper:
+#     #    "0.35.0/bio/fastqc"
+#     shell:
+#         "fastqc -t 2 {input} -o qc/fastqc/ --quiet"
 
 rule multiqc:
     input:
@@ -39,5 +42,6 @@ rule multiqc:
         "logs/multiqc.log"
     params:
         #config["params"]["multiqc"]
-    wrapper:
-          "0.35.0/bio/multiqc" 
+    # wrapper:
+    #       "0.35.0/bio/multiqc" 
+    
