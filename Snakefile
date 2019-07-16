@@ -1,4 +1,3 @@
-include: "rules/common.smk"
 include: "rules/qc.smk"
     
 rule all:

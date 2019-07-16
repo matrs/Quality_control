@@ -1,13 +1,9 @@
-# path or URL to sample sheet (TSV format, columns: sample, condition, ...)
-samples: samples.tsv
-# path or URL to sequencing unit sheet (TSV format, columns: sample, unit, fq1, fq2)
-# Units are technical replicates (e.g. lanes, or resequencing of the same biological
-# sample).
-units: units.tsv
+file_path: "../SRP073391/reads/paired-reads"
 fastq_screen:
   conf: "fastq_screen.conf"
-  threads: 4
+  threads: 5
+
 params:
   fastq_screen: '' 
   multiqc: --fullnames --title "QC fastq screen and fastqc" 
-           --comment "Quality control, Fastqc plus Fastq Screen to check for contaminatio from common sources"
+           --comment "Quality control, Fastqc plus Fastq Screen to check for contamination from common sources"

@@ -2,4 +2,9 @@ channels:
   - bioconda
   - conda-forge
   - defaults
-pandas = 0.23.0
+dependencies:
+  - python>=3.5
+  - fastq-screen=0.13.0=pl526_0
+  - fastqc=0.11.8=1
+  - multiqc=1.7=py_4
+

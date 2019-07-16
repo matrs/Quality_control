@@ -30,3 +30,10 @@ scripts/.snakemake*
 !wrappers/fastq_screen/*
 wrappers/fastq_screen/wrapper.py~
 wrappers/fastq_screen/environment.yaml~
+envs/qc.yaml~
+report/workflow.rst~
+rules/common.smk~
+rules/common.smk~~
+rules/qc.smk~
+rules/qc.smk~~
+scripts/common.py~
