@@ -58,13 +58,6 @@ If you not only want to fix the software stack but also the underlying OS, use
 in combination with any of the modes above.
 See the [Snakemake documentation](https://snakemake.readthedocs.io/en/stable/executable.html) for further details.
 
-# Step 4: Investigate results
-
-After successful execution, you can create a self-contained interactive HTML report with all results via:
-
-    snakemake --report report.html
-
-This report can, e.g., be forwarded to your collaborators.
 
 ### Advanced
 
@@ -81,3 +74,4 @@ The following recipe provides established best practices for running and extendi
 9. Optional: Create a self-contained workflow archive for publication along with the paper (snakemake --archive).
 10. Optional: Delete the local clone/workdir to free space.
 
+![DAG](/dag_rules.svg)
