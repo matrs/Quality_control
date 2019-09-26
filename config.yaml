@@ -1,9 +1,10 @@
-file_path: "../SRP073391/reads/paired-reads"
+file_path: "/run/media/mibu/ADATA_ext4/UCR_CLUSTER/rna-seq_yeast/Pang_Sci-Reports_2016/SRP073391/reads/paired"
+
 fastq_screen:
   conf: "fastq_screen.conf"
   threads: 5
 
 params:
   fastq_screen: '' 
-  multiqc: --fullnames --title "QC fastq screen and fastqc" 
+  multiqc: --fullnames --title "QC fastq screen and fastqc"
            --comment "Quality control, Fastqc plus Fastq Screen to check for contamination from common sources"

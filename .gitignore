@@ -28,6 +28,7 @@ scripts/.snakemake*
 !wrappers
 !wrappers/*
 !wrappers/fastq_screen/*
+!dag_rules.svg
 wrappers/fastq_screen/wrapper.py~
 wrappers/fastq_screen/environment.yaml~
 envs/qc.yaml~

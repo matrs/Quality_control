@@ -3,11 +3,12 @@ configfile: "config.yaml"
 
 path = Path(config["file_path"])
 wildcards, = glob_wildcards(path.joinpath("{sample}.fastq.gz"))
-print("wildcards", wildcards)
+
+#print("wildcards", wildcards)
 
 rule fastq_screen:
     input:
-        "../SRP073391/reads/paired-reads/{sample}.fastq.gz"
+        get_read
     output:
         html="qc/fastq_screen/{sample}_screen.html",
         png="qc/fastq_screen/{sample}_screen.png",
@@ -26,7 +27,7 @@ rule fastq_screen:
     
 rule fastqc:
     input:
-       "../SRP073391/reads/paired-reads/{sample}.fastq.gz"
+       get_read
     output:
         html="qc/fastqc/{sample}_fastqc.html",
         zip="qc/fastqc/{sample}_fastqc.zip"
